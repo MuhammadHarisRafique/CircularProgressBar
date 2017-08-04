@@ -12,6 +12,8 @@
 		4D3684DB1F33675900458821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3684D91F33675900458821 /* Main.storyboard */; };
 		4D3684DD1F33675900458821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3684DC1F33675900458821 /* Assets.xcassets */; };
 		4D3684E01F33675900458821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3684DE1F33675900458821 /* LaunchScreen.storyboard */; };
+		4D3684EC1F33680800458821 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3684E91F33680800458821 /* MBCircularProgressBarLayer.m */; };
+		4D3684ED1F33680800458821 /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3684EB1F33680800458821 /* MBCircularProgressBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		4D3684DC1F33675900458821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D3684DF1F33675900458821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3684E11F33675900458821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D3684E71F33680700458821 /* MBProgressBarApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressBarApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D3684E81F33680800458821 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
+		4D3684E91F33680800458821 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
+		4D3684EA1F33680800458821 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		4D3684EB1F33680800458821 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCircularProgressBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +62,16 @@
 			isa = PBXGroup;
 			children = (
 				4D3684D51F33675900458821 /* AppDelegate.swift */,
+				4D3684E81F33680800458821 /* MBCircularProgressBarLayer.h */,
+				4D3684E91F33680800458821 /* MBCircularProgressBarLayer.m */,
+				4D3684EA1F33680800458821 /* MBCircularProgressBarView.h */,
+				4D3684EB1F33680800458821 /* MBCircularProgressBarView.m */,
 				4D3684D71F33675900458821 /* ViewController.swift */,
 				4D3684D91F33675900458821 /* Main.storyboard */,
 				4D3684DC1F33675900458821 /* Assets.xcassets */,
 				4D3684DE1F33675900458821 /* LaunchScreen.storyboard */,
 				4D3684E11F33675900458821 /* Info.plist */,
+				4D3684E71F33680700458821 /* MBProgressBarApplication-Bridging-Header.h */,
 			);
 			path = MBProgressBarApplication;
 			sourceTree = "<group>";
@@ -97,6 +109,7 @@
 					4D3684D11F33675800458821 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8GWSL85966;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3684D81F33675900458821 /* ViewController.swift in Sources */,
+				4D3684EC1F33680800458821 /* MBCircularProgressBarLayer.m in Sources */,
 				4D3684D61F33675900458821 /* AppDelegate.swift in Sources */,
+				4D3684ED1F33680800458821 /* MBCircularProgressBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +278,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8GWSL85966;
 				INFOPLIST_FILE = MBProgressBarApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HigherVisibility.MBProgressBarApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MBProgressBarApplication/MBProgressBarApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,11 +294,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8GWSL85966;
 				INFOPLIST_FILE = MBProgressBarApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HigherVisibility.MBProgressBarApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MBProgressBarApplication/MBProgressBarApplication-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
